@@ -1,8 +1,10 @@
+import Sidebar from './components/Sidebar'
+
 const App = () => {
     return (
-        <h1 className="text-2xl font-bold text-red-600 underline">
-            Hello World
-        </h1>
+        <div>
+            <Sidebar />
+        </div>
     )
 }
 
