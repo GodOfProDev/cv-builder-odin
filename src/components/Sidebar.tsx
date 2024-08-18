@@ -5,11 +5,7 @@ import ExperienceForm from './ExperienceForm'
 import PersonalDetailsForm from './PersonalDetailsForm'
 
 const Sidebar = () => {
-    const [activeIndex, setIndex] = useState(0)
-
-    const handleAccordionClick = (id: number) => {
-        setIndex(id)
-    }
+    const [activeIndex, setIndex] = useState(0) // Accordion State
 
     return (
         <div className="w-[450px] bg-red-100">
@@ -17,14 +13,14 @@ const Sidebar = () => {
             <Accordion
                 title="Education"
                 isActive={activeIndex === 0}
-                onClick={() => handleAccordionClick(0)}
+                onClick={() => setIndex(0)}
             >
                 <EducationForm />
             </Accordion>
             <Accordion
                 title="Experience"
                 isActive={activeIndex === 1}
-                onClick={() => handleAccordionClick(1)}
+                onClick={() => setIndex(1)}
             >
                 <ExperienceForm />
             </Accordion>
