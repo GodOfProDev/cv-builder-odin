@@ -1,12 +1,16 @@
 import Accordion from './Accordion'
+// import EducationForm from './EducationForm'
+// import ExperienceForm from './ExperienceForm'
 import PersonalDetailsForm from './PersonalDetailsForm'
 
 const Sidebar = () => {
     return (
         <div className="w-[450px] bg-red-100">
             <PersonalDetailsForm />
-            <Accordion /> {/* Props: {title: "Education"} */}
-            <Accordion /> {/* Props: {title: "Experience"} */}
+            {/* props: {title: "Education"} */}
+            <Accordion>{/* <EducationForm /> */}</Accordion>
+            {/* props: {title: "Experience"} */}
+            <Accordion>{/* <ExperienceForm /> */}</Accordion>
         </div>
     )
 }
