@@ -5,10 +5,10 @@ import ExperienceForm from './ExperienceForm'
 import PersonalDetailsForm from './PersonalDetailsForm'
 
 const Sidebar = () => {
-    const [activeIndex, setIndex] = useState(0) // Accordion State
+    const [activeIndex, setIndex] = useState(-1) // Accordion State
 
     return (
-        <div className="w-[450px] bg-red-100">
+        <div className="p-10">
             <PersonalDetailsForm />
             <Accordion
                 title="Education"

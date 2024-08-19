@@ -2,7 +2,7 @@ import Sidebar from './components/Sidebar'
 
 const App = () => {
     return (
-        <div>
+        <div className="bg-slate-100">
             <Sidebar />
         </div>
     )
