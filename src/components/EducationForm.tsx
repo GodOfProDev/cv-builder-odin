@@ -1,6 +1,6 @@
 const EducationForm = () => {
     return (
-        <div className="rounded-b-lg bg-neutral-200 font-semibold">
+        <div className="rounded-lg bg-neutral-200 font-semibold">
             <form className="flex flex-col px-2 py-2">
                 <label htmlFor="school" className="py-1 font-semibold">
                     School
@@ -40,7 +40,7 @@ const EducationForm = () => {
                 <input
                     type="text"
                     id="location"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 mb-5 rounded-md py-1"
                 ></input>
             </form>
         </div>

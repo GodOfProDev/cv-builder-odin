@@ -48,7 +48,7 @@ const ExperienceForm = () => {
                 <input
                     type="text"
                     id="description"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 mb-5 rounded-md py-1"
                 ></input>
             </form>
         </div>
