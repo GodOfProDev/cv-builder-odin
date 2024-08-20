@@ -1,17 +1,22 @@
 import { useState } from 'react'
 import Experience from '../data/experience'
+import { exampleExperienceData } from '../data/exampleData'
 
 interface ExperienceFormProps {
     setExperienceData: (data: Experience) => void
 }
 
+const exampleData = exampleExperienceData
+
 const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
-    const [companyName, setCompanyName] = useState('')
-    const [positionTitle, setPositionTitle] = useState('')
-    const [startDate, setStartDate] = useState('')
-    const [endDate, setEndDate] = useState('')
-    const [location, setLocation] = useState('')
-    const [description, setDescription] = useState('')
+    const [companyName, setCompanyName] = useState(exampleData.companyName)
+    const [positionTitle, setPositionTitle] = useState(
+        exampleData.positionTitle
+    )
+    const [startDate, setStartDate] = useState(exampleData.startDate)
+    const [endDate, setEndDate] = useState(exampleData.endDate)
+    const [location, setLocation] = useState(exampleData.location)
+    const [description, setDescription] = useState(exampleData.description)
 
     const handleDataChange = () => {
         const newData = new Experience(
@@ -36,6 +41,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                     type="text"
                     id="companyName"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={companyName}
                     onChange={(e) => {
                         setCompanyName(e.target.value)
                         handleDataChange()
@@ -48,6 +54,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                     type="text"
                     id="positionTitle"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={positionTitle}
                     onChange={(e) => {
                         setPositionTitle(e.target.value)
                         handleDataChange()
@@ -60,6 +67,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                     type="text"
                     id="startDate"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={startDate}
                     onChange={(e) => {
                         setStartDate(e.target.value)
                         handleDataChange()
@@ -72,6 +80,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                     type="text"
                     id="endDate"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={endDate}
                     onChange={(e) => {
                         setEndDate(e.target.value)
                         handleDataChange()
@@ -84,6 +93,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                     type="text"
                     id="location"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={location}
                     onChange={(e) => {
                         setLocation(e.target.value)
                         handleDataChange()
@@ -96,6 +106,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                     type="text"
                     id="description"
                     className="bg-netrual-50 mx-5 mb-5 rounded-md py-1"
+                    value={description}
                     onChange={(e) => {
                         setDescription(e.target.value)
                         handleDataChange()

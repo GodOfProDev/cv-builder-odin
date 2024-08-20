@@ -33,6 +33,7 @@ const PersonalDetailsForm = ({
                     type="text"
                     id="fullName"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={fullName}
                     onChange={(e) => {
                         setFullName(e.target.value)
                         handleDataChange()
@@ -45,6 +46,7 @@ const PersonalDetailsForm = ({
                     type="text"
                     id="email"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={email}
                     onChange={(e) => {
                         setEmail(e.target.value)
                         handleDataChange()
@@ -57,6 +59,7 @@ const PersonalDetailsForm = ({
                     type="text"
                     id="phoneNumber"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={phoneNumber}
                     onChange={(e) => {
                         setPhoneNumber(e.target.value)
                         handleDataChange()
@@ -69,6 +72,7 @@ const PersonalDetailsForm = ({
                     type="text"
                     id="address"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={address}
                     onChange={(e) => {
                         setAddress(e.target.value)
                         handleDataChange()

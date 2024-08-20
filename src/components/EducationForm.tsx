@@ -37,6 +37,7 @@ const EducationForm = ({ setEducationData }: EducationFormProps) => {
                     type="text"
                     id="school"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={school}
                     onChange={(e) => {
                         setSchool(e.target.value)
                         handleDataChange()
@@ -49,6 +50,7 @@ const EducationForm = ({ setEducationData }: EducationFormProps) => {
                     type="text"
                     id="degree"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={degree}
                     onChange={(e) => {
                         setDegree(e.target.value)
                         handleDataChange()
@@ -61,6 +63,7 @@ const EducationForm = ({ setEducationData }: EducationFormProps) => {
                     type="text"
                     id="startDate"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={startDate}
                     onChange={(e) => {
                         setStartDate(e.target.value)
                         handleDataChange()
@@ -73,6 +76,7 @@ const EducationForm = ({ setEducationData }: EducationFormProps) => {
                     type="text"
                     id="endDate"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
+                    value={endDate}
                     onChange={(e) => {
                         setEndDate(e.target.value)
                         handleDataChange()
@@ -85,6 +89,7 @@ const EducationForm = ({ setEducationData }: EducationFormProps) => {
                     type="text"
                     id="location"
                     className="bg-netrual-50 mx-5 mb-5 rounded-md py-1"
+                    value={location}
                     onChange={(e) => {
                         setLocation(e.target.value)
                         handleDataChange()

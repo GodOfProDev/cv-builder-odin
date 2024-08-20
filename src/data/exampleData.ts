@@ -14,8 +14,7 @@ export const exampleEducationData = new Education(
     'Bachelor of Science in Computer Science',
     '2015-08-01',
     '2019-05-15',
-    'Exampleton, CA',
-    'Graduated with honors and a 3.9 GPA.'
+    'Exampleton, CA'
 )
 
 export const exampleExperienceData = new Experience(
@@ -23,5 +22,6 @@ export const exampleExperienceData = new Experience(
     'Software Engineer',
     '2019-06-01',
     '2022-03-31',
-    'San Francisco, CA'
+    'San Francisco, CA',
+    'Made the software the company uses speed go up by 30%'
 )
