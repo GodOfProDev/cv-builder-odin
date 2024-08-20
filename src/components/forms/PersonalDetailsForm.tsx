@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import PersonalInfo from '../data/personalInfo'
-import { examplePersonalInfoData } from '../data/exampleData'
+import PersonalInfo from '../../data/personalInfo'
+import { examplePersonalInfoData } from '../../data/exampleData'
 
 interface PersonalDetailsFormProps {
     setPersonalInfoData: (data: PersonalInfo) => void

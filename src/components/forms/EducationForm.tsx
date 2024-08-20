@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Education from '../data/education'
-import { exampleEducationData } from '../data/exampleData'
+import Education from '../../data/education'
+import { exampleEducationData } from '../../data/exampleData'
 
 interface EducationFormProps {
     setEducationData: (data: Education) => void

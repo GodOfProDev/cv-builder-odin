@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Experience from '../data/experience'
-import { exampleExperienceData } from '../data/exampleData'
+import Experience from '../../data/experience'
+import { exampleExperienceData } from '../../data/exampleData'
 
 interface ExperienceFormProps {
     setExperienceData: (data: Experience) => void
