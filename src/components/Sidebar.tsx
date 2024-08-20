@@ -3,6 +3,7 @@ import Accordion from './Accordion'
 import EducationForm from './EducationForm'
 import ExperienceForm from './ExperienceForm'
 import PersonalDetailsForm from './PersonalDetailsForm'
+import Button from './Button'
 
 const Sidebar = () => {
     const [activeIndex, setIndex] = useState(-1) // Accordion State
@@ -26,6 +27,9 @@ const Sidebar = () => {
             >
                 <ExperienceForm />
             </Accordion>
+            <div className="py-3">
+                <Button>LOAD EXAMPLE</Button>
+            </div>
         </div>
     )
 }

@@ -17,20 +17,24 @@ const Accordion = ({
 }: AccordionProp) => {
     if (isActive) {
         return (
-            <div className="my-3 rounded-lg bg-neutral-200 p-3 pb-4">
-                <button onClick={onClose} className="text-xl font-semibold">
+            <div>
+                <button
+                    onClick={onClose}
+                    className="justify-betweenborder-none mt-5 flex w-full cursor-pointer items-center rounded-t-lg bg-neutral-200 p-4 text-xl font-semibold"
+                >
                     {title}
                 </button>
-                <div className="py-3">{children}</div>
+                <div>{children}</div>
             </div>
         )
     } else {
         return (
-            <div className="my-3 rounded-lg bg-neutral-200 p-3 pb-4">
-                <button onClick={onOpen} className="text-xl font-semibold">
-                    {title}
-                </button>
-            </div>
+            <button
+                onClick={onOpen}
+                className="my-5 flex w-full cursor-pointer items-center justify-between rounded-lg border-none bg-neutral-200 p-4 text-xl font-semibold"
+            >
+                {title}
+            </button>
         )
     }
 }
