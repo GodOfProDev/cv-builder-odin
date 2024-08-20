@@ -3,26 +3,32 @@ import { ReactNode } from 'react'
 interface AccordionProp {
     title: string
     isActive: boolean
-    onClick: () => void
+    onOpen: () => void
+    onClose: () => void
     children: ReactNode
 }
 
-const Accordion = ({ title, children, isActive, onClick }: AccordionProp) => {
+const Accordion = ({
+    title,
+    children,
+    isActive,
+    onOpen,
+    onClose,
+}: AccordionProp) => {
     if (isActive) {
         return (
-            <button onClick={onClick}>
-                <h2>Accordion - {title}</h2>
-                {children}
-            </button>
+            <div className="my-3 rounded-lg bg-neutral-200 p-3 pb-4">
+                <button onClick={onClose} className="text-xl font-semibold">
+                    {title}
+                </button>
+                <div className="py-3">{children}</div>
+            </div>
         )
     } else {
         return (
-            <div>
-                <button
-                    onClick={onClick}
-                    className="text-2xl text-red-700 underline"
-                >
-                    Accordion - {title} - NOT ACTIVE
+            <div className="my-3 rounded-lg bg-neutral-200 p-3 pb-4">
+                <button onClick={onOpen} className="text-xl font-semibold">
+                    {title}
                 </button>
             </div>
         )

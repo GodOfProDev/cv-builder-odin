@@ -8,19 +8,21 @@ const Sidebar = () => {
     const [activeIndex, setIndex] = useState(-1) // Accordion State
 
     return (
-        <div className="p-10">
+        <div className="max-w-[400px] p-10">
             <PersonalDetailsForm />
             <Accordion
                 title="Education"
                 isActive={activeIndex === 0}
-                onClick={() => setIndex(0)}
+                onOpen={() => setIndex(0)}
+                onClose={() => setIndex(-1)}
             >
                 <EducationForm />
             </Accordion>
             <Accordion
                 title="Experience"
                 isActive={activeIndex === 1}
-                onClick={() => setIndex(1)}
+                onOpen={() => setIndex(1)}
+                onClose={() => setIndex(-1)}
             >
                 <ExperienceForm />
             </Accordion>
