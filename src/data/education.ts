@@ -1,24 +1,21 @@
-export default class Education {
-    companyName: string
-    positionTitle: string
+export default class Edcation {
+    school: string
+    degree: string
     startDate: string
     endDate: string
     location: string
-    description: string
 
     constructor(
-        companyName: string,
-        positionTitle: string,
+        school: string,
+        degree: string,
         startDate: string,
         endDate: string,
-        location: string,
-        description: string
+        location: string
     ) {
-        this.companyName = companyName
-        this.positionTitle = positionTitle
+        this.school = school
+        this.degree = degree
         this.startDate = startDate
         this.endDate = endDate
         this.location = location
-        this.description = description
     }
 }

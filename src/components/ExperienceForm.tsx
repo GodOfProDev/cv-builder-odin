@@ -1,12 +1,30 @@
 import { useState } from 'react'
+import Experience from '../data/experience'
 
-const ExperienceForm = () => {
+interface ExperienceFormProps {
+    setExperienceData: (data: Experience) => void
+}
+
+const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
     const [companyName, setCompanyName] = useState('')
     const [positionTitle, setPositionTitle] = useState('')
     const [startDate, setStartDate] = useState('')
     const [endDate, setEndDate] = useState('')
     const [location, setLocation] = useState('')
     const [description, setDescription] = useState('')
+
+    const handleDataChange = () => {
+        const newData = new Experience(
+            companyName,
+            positionTitle,
+            startDate,
+            endDate,
+            location,
+            description
+        )
+
+        setExperienceData(newData)
+    }
 
     return (
         <div className="rounded-b-lg bg-neutral-200 font-semibold">
@@ -20,6 +38,7 @@ const ExperienceForm = () => {
                     className="bg-netrual-50 mx-5 rounded-md py-1"
                     onChange={(e) => {
                         setCompanyName(e.target.value)
+                        handleDataChange()
                     }}
                 ></input>
                 <label htmlFor="positionTitle" className="py-1 font-semibold">
@@ -29,7 +48,10 @@ const ExperienceForm = () => {
                     type="text"
                     id="positionTitle"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
-                    onChange={(e) => setPositionTitle(e.target.value)}
+                    onChange={(e) => {
+                        setPositionTitle(e.target.value)
+                        handleDataChange()
+                    }}
                 ></input>
                 <label htmlFor="startDate" className="py-1 font-semibold">
                     Start Date
@@ -38,7 +60,10 @@ const ExperienceForm = () => {
                     type="text"
                     id="startDate"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
-                    onChange={(e) => setStartDate(e.target.value)}
+                    onChange={(e) => {
+                        setStartDate(e.target.value)
+                        handleDataChange()
+                    }}
                 ></input>
                 <label htmlFor="endDate" className="py-1 font-semibold">
                     End Date
@@ -47,7 +72,10 @@ const ExperienceForm = () => {
                     type="text"
                     id="endDate"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
-                    onChange={(e) => setEndDate(e.target.value)}
+                    onChange={(e) => {
+                        setEndDate(e.target.value)
+                        handleDataChange()
+                    }}
                 ></input>
                 <label htmlFor="location" className="py-1 font-semibold">
                     Location
@@ -56,7 +84,10 @@ const ExperienceForm = () => {
                     type="text"
                     id="location"
                     className="bg-netrual-50 mx-5 rounded-md py-1"
-                    onChange={(e) => setLocation(e.target.value)}
+                    onChange={(e) => {
+                        setLocation(e.target.value)
+                        handleDataChange()
+                    }}
                 ></input>
                 <label htmlFor="description" className="py-1 font-semibold">
                     Description
@@ -65,7 +96,10 @@ const ExperienceForm = () => {
                     type="text"
                     id="description"
                     className="bg-netrual-50 mx-5 mb-5 rounded-md py-1"
-                    onChange={(e) => setDescription(e.target.value)}
+                    onChange={(e) => {
+                        setDescription(e.target.value)
+                        handleDataChange()
+                    }}
                 ></input>
             </form>
         </div>
