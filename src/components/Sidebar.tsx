@@ -22,7 +22,7 @@ const Sidebar = ({
     const [activeIndex, setIndex] = useState(-1) // Accordion State
 
     return (
-        <div className="max-w-[400px] p-10">
+        <div className="p-3">
             <PersonalDetailsForm setPersonalInfoData={setPersonalInfoData} />
             <Accordion
                 title="Education"

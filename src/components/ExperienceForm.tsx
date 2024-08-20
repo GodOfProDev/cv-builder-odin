@@ -40,7 +40,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                 <input
                     type="text"
                     id="companyName"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={companyName}
                     onChange={(e) => {
                         setCompanyName(e.target.value)
@@ -53,7 +53,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                 <input
                     type="text"
                     id="positionTitle"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={positionTitle}
                     onChange={(e) => {
                         setPositionTitle(e.target.value)
@@ -66,7 +66,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                 <input
                     type="text"
                     id="startDate"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={startDate}
                     onChange={(e) => {
                         setStartDate(e.target.value)
@@ -79,7 +79,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                 <input
                     type="text"
                     id="endDate"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={endDate}
                     onChange={(e) => {
                         setEndDate(e.target.value)
@@ -92,7 +92,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                 <input
                     type="text"
                     id="location"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={location}
                     onChange={(e) => {
                         setLocation(e.target.value)
@@ -105,7 +105,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
                 <input
                     type="text"
                     id="description"
-                    className="bg-netrual-50 mx-5 mb-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 mb-5 rounded-md px-2 py-1"
                     value={description}
                     onChange={(e) => {
                         setDescription(e.target.value)

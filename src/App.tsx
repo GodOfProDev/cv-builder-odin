@@ -8,6 +8,7 @@ import {
 import PersonalInfo from './data/personalInfo'
 import Education from './data/education'
 import Experience from './data/experience'
+import ResumePreview from './components/ResumePreview'
 
 const App = () => {
     const [personalInfoData, setPersonalInfoData] = useState<PersonalInfo>(
@@ -38,12 +39,13 @@ const App = () => {
     }, [personalInfoData])
 
     return (
-        <div className="bg-slate-100">
+        <div className="grid grid-cols-[minmax(0,_1fr)_minmax(0,_2fr)] bg-slate-100 max-[900px]:grid-cols-1 max-[900px]:grid-rows-2">
             <Sidebar
                 setPersonalInfoData={setPersonalInfoData}
                 setEducationData={setEducationData}
                 setExperienceData={setExperienceData}
             />
+            <ResumePreview />
         </div>
     )
 }

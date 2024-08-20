@@ -32,7 +32,7 @@ const PersonalDetailsForm = ({
                 <input
                     type="text"
                     id="fullName"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={fullName}
                     onChange={(e) => {
                         setFullName(e.target.value)
@@ -45,7 +45,7 @@ const PersonalDetailsForm = ({
                 <input
                     type="text"
                     id="email"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={email}
                     onChange={(e) => {
                         setEmail(e.target.value)
@@ -58,7 +58,7 @@ const PersonalDetailsForm = ({
                 <input
                     type="text"
                     id="phoneNumber"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={phoneNumber}
                     onChange={(e) => {
                         setPhoneNumber(e.target.value)
@@ -71,7 +71,7 @@ const PersonalDetailsForm = ({
                 <input
                     type="text"
                     id="address"
-                    className="bg-netrual-50 mx-5 rounded-md py-1"
+                    className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={address}
                     onChange={(e) => {
                         setAddress(e.target.value)
