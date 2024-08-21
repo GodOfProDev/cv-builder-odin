@@ -38,10 +38,7 @@ const ExperienceForm = ({ setExperienceData, data }: ExperienceFormProps) => {
                     id="companyName"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={companyName}
-                    onChange={(e) => {
-                        setCompanyName(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setCompanyName(e.target.value)}
                 ></input>
                 <label htmlFor="positionTitle" className="py-1 font-semibold">
                     Position Title
@@ -51,10 +48,7 @@ const ExperienceForm = ({ setExperienceData, data }: ExperienceFormProps) => {
                     id="positionTitle"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={positionTitle}
-                    onChange={(e) => {
-                        setPositionTitle(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setPositionTitle(e.target.value)}
                 ></input>
                 <label htmlFor="startDate" className="py-1 font-semibold">
                     Start Date
@@ -64,10 +58,7 @@ const ExperienceForm = ({ setExperienceData, data }: ExperienceFormProps) => {
                     id="startDate"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={startDate}
-                    onChange={(e) => {
-                        setStartDate(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setStartDate(e.target.value)}
                 ></input>
                 <label htmlFor="endDate" className="py-1 font-semibold">
                     End Date
@@ -77,10 +68,7 @@ const ExperienceForm = ({ setExperienceData, data }: ExperienceFormProps) => {
                     id="endDate"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={endDate}
-                    onChange={(e) => {
-                        setEndDate(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setEndDate(e.target.value)}
                 ></input>
                 <label htmlFor="location" className="py-1 font-semibold">
                     Location
@@ -90,10 +78,7 @@ const ExperienceForm = ({ setExperienceData, data }: ExperienceFormProps) => {
                     id="location"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={location}
-                    onChange={(e) => {
-                        setLocation(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setLocation(e.target.value)}
                 ></input>
                 <label htmlFor="description" className="py-1 font-semibold">
                     Description
@@ -103,10 +88,7 @@ const ExperienceForm = ({ setExperienceData, data }: ExperienceFormProps) => {
                     id="description"
                     className="bg-netrual-50 mx-5 mb-5 rounded-md px-2 py-1"
                     value={description}
-                    onChange={(e) => {
-                        setDescription(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setDescription(e.target.value)}
                 ></input>
             </form>
         </div>
