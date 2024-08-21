@@ -1,26 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PersonalInfo from '../../data/personalInfo'
-import { examplePersonalInfoData } from '../../data/exampleData'
 
 interface PersonalDetailsFormProps {
     setPersonalInfoData: (data: PersonalInfo) => void
+    data: PersonalInfo
 }
-
-const exampleData = examplePersonalInfoData
 
 const PersonalDetailsForm = ({
     setPersonalInfoData,
+    data,
 }: PersonalDetailsFormProps) => {
-    const [fullName, setFullName] = useState(exampleData.fullName)
-    const [email, setEmail] = useState(exampleData.email)
-    const [phoneNumber, setPhoneNumber] = useState(exampleData.phoneNumber)
-    const [address, setAddress] = useState(exampleData.address)
+    const [fullName, setFullName] = useState(data.fullName)
+    const [email, setEmail] = useState(data.email)
+    const [phoneNumber, setPhoneNumber] = useState(data.phoneNumber)
+    const [address, setAddress] = useState(data.address)
 
-    const handleDataChange = () => {
+    useEffect(() => {
         const newData = new PersonalInfo(fullName, email, phoneNumber, address)
-
         setPersonalInfoData(newData)
-    }
+    }, [fullName, email, phoneNumber, address])
 
     return (
         <div className="rounded-lg bg-neutral-200 p-3 pb-4 font-semibold">
@@ -34,10 +32,7 @@ const PersonalDetailsForm = ({
                     id="fullName"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={fullName}
-                    onChange={(e) => {
-                        setFullName(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setFullName(e.target.value)}
                 ></input>
                 <label htmlFor="email" className="py-1 font-semibold">
                     Email
@@ -47,10 +42,7 @@ const PersonalDetailsForm = ({
                     id="email"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={email}
-                    onChange={(e) => {
-                        setEmail(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setEmail(e.target.value)}
                 ></input>
                 <label htmlFor="phoneNumber" className="py-1 font-semibold">
                     Phone number
@@ -60,10 +52,7 @@ const PersonalDetailsForm = ({
                     id="phoneNumber"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={phoneNumber}
-                    onChange={(e) => {
-                        setPhoneNumber(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                 ></input>
                 <label htmlFor="address" className="py-1 font-semibold">
                     Address
@@ -73,10 +62,7 @@ const PersonalDetailsForm = ({
                     id="address"
                     className="bg-netrual-50 mx-5 rounded-md px-2 py-1"
                     value={address}
-                    onChange={(e) => {
-                        setAddress(e.target.value)
-                        handleDataChange()
-                    }}
+                    onChange={(e) => setAddress(e.target.value)}
                 ></input>
             </form>
         </div>

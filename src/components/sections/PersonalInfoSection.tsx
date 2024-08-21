@@ -1,7 +1,17 @@
-const PersonalInfoSection = () => {
+import PersonalInfo from '../../data/personalInfo'
+
+interface PersonalInfoSectionProps {
+    personalInfoData: PersonalInfo
+}
+
+const PersonalInfoSection = ({
+    personalInfoData,
+}: PersonalInfoSectionProps) => {
     return (
         <div className="flex flex-col items-center justify-center gap-4 bg-blue-900 text-white">
-            <h1 className="pt-8 text-4xl font-semibold">Josephine Meyers</h1>
+            <h1 className="pt-8 text-4xl font-semibold">
+                {personalInfoData.fullName}
+            </h1>
             <div className="flex gap-1 pb-8 max-[680px]:grid max-[680px]:grid-rows-3 max-[680px]:text-xl">
                 <div className="flex items-center justify-center">
                     <svg
@@ -14,7 +24,7 @@ const PersonalInfoSection = () => {
                         <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                     </svg>
 
-                    <p className="px-2">josephine.meyers@mail.co.uk</p>
+                    <p className="px-2">{personalInfoData.email}</p>
                 </div>
                 <div className="flex items-center justify-center">
                     <svg
@@ -30,7 +40,7 @@ const PersonalInfoSection = () => {
                         />
                     </svg>
 
-                    <p className="px-2">+44 3245 5521 5521</p>
+                    <p className="px-2">{personalInfoData.phoneNumber}</p>
                 </div>
                 <div className="flex items-center justify-center">
                     <svg
@@ -46,7 +56,7 @@ const PersonalInfoSection = () => {
                         />
                     </svg>
 
-                    <p className="px-2">London, UK</p>
+                    <p className="px-2">{personalInfoData.address}</p>
                 </div>
             </div>
         </div>

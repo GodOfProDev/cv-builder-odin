@@ -14,7 +14,7 @@ export const exampleEducationData = new Education(
     'Bachelor of Science in Computer Science',
     '2015-08-01',
     '2019-05-15',
-    'Exampleton, CA'
+    'America, CA'
 )
 
 export const exampleExperienceData = new Experience(

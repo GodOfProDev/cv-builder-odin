@@ -1,21 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Education from '../../data/education'
-import { exampleEducationData } from '../../data/exampleData'
 
 interface EducationFormProps {
     setEducationData: (data: Education) => void
+    data: Education
 }
 
-const exampleData = exampleEducationData
+const EducationForm = ({ setEducationData, data }: EducationFormProps) => {
+    const [school, setSchool] = useState(data.school)
+    const [degree, setDegree] = useState(data.degree)
+    const [startDate, setStartDate] = useState(data.startDate)
+    const [endDate, setEndDate] = useState(data.endDate)
+    const [location, setLocation] = useState(data.location)
 
-const EducationForm = ({ setEducationData }: EducationFormProps) => {
-    const [school, setSchool] = useState(exampleData.school)
-    const [degree, setDegree] = useState(exampleData.degree)
-    const [startDate, setStartDate] = useState(exampleData.startDate)
-    const [endDate, setEndDate] = useState(exampleData.endDate)
-    const [location, setLocation] = useState(exampleData.location)
-
-    const handleDataChange = () => {
+    useEffect(() => {
         const newData = new Education(
             school,
             degree,
@@ -25,7 +23,7 @@ const EducationForm = ({ setEducationData }: EducationFormProps) => {
         )
 
         setEducationData(newData)
-    }
+    }, [school, degree, startDate, endDate, location])
 
     return (
         <div className="rounded-lg bg-neutral-200 font-semibold">

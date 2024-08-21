@@ -1,24 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Experience from '../../data/experience'
-import { exampleExperienceData } from '../../data/exampleData'
 
 interface ExperienceFormProps {
     setExperienceData: (data: Experience) => void
+    data: Experience
 }
 
-const exampleData = exampleExperienceData
+const ExperienceForm = ({ setExperienceData, data }: ExperienceFormProps) => {
+    const [companyName, setCompanyName] = useState(data.companyName)
+    const [positionTitle, setPositionTitle] = useState(data.positionTitle)
+    const [startDate, setStartDate] = useState(data.startDate)
+    const [endDate, setEndDate] = useState(data.endDate)
+    const [location, setLocation] = useState(data.location)
+    const [description, setDescription] = useState(data.description)
 
-const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
-    const [companyName, setCompanyName] = useState(exampleData.companyName)
-    const [positionTitle, setPositionTitle] = useState(
-        exampleData.positionTitle
-    )
-    const [startDate, setStartDate] = useState(exampleData.startDate)
-    const [endDate, setEndDate] = useState(exampleData.endDate)
-    const [location, setLocation] = useState(exampleData.location)
-    const [description, setDescription] = useState(exampleData.description)
-
-    const handleDataChange = () => {
+    useEffect(() => {
         const newData = new Experience(
             companyName,
             positionTitle,
@@ -29,7 +25,7 @@ const ExperienceForm = ({ setExperienceData }: ExperienceFormProps) => {
         )
 
         setExperienceData(newData)
-    }
+    }, [companyName, positionTitle, startDate, endDate, location, description])
 
     return (
         <div className="rounded-b-lg bg-neutral-200 font-semibold">

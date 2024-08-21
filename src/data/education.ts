@@ -1,4 +1,4 @@
-export default class Edcation {
+export default class Education {
     school: string
     degree: string
     startDate: string

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import {
     exampleEducationData,
@@ -20,32 +20,21 @@ const App = () => {
         exampleExperienceData
     )
 
-    useEffect(() => {
-        console.log(personalInfoData)
-        console.log(educationData)
-        console.log(experienceData)
-    }, [])
-
-    useEffect(() => {
-        console.log(educationData)
-    }, [educationData])
-
-    useEffect(() => {
-        console.log(experienceData)
-    }, [experienceData])
-
-    useEffect(() => {
-        console.log(personalInfoData)
-    }, [personalInfoData])
-
     return (
         <div className="grid grid-cols-[minmax(0,_1fr)_minmax(0,_2fr)] bg-slate-100 max-[900px]:grid-cols-1 max-[900px]:grid-rows-2">
             <Sidebar
                 setPersonalInfoData={setPersonalInfoData}
                 setEducationData={setEducationData}
                 setExperienceData={setExperienceData}
+                personalInfoData={personalInfoData}
+                educationData={educationData}
+                experienceData={experienceData}
             />
-            <ResumePreview />
+            <ResumePreview
+                personalInfoData={personalInfoData}
+                educationData={educationData}
+                experienceData={experienceData}
+            />
         </div>
     )
 }
