@@ -26,9 +26,11 @@ const BodySection = ({
 
                 <div className="flex flex-col py-5">
                     <div className="flex gap-4">
-                        <p className="text-lg">
-                            {startDate} {'-'} {endDate}
-                        </p>
+                        {(startDate || endDate) && (
+                            <p className="text-lg">
+                                {startDate} {'-'} {endDate}
+                            </p>
+                        )}
                         <p className="text-lg font-bold">{title}</p>
                     </div>
                     <div className="flex gap-4">
