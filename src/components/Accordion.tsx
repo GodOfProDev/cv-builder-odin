@@ -20,7 +20,7 @@ const Accordion = ({
             <div>
                 <button
                     onClick={onClose}
-                    className="mt-5 flex w-full cursor-pointer items-center justify-between rounded-t-lg border-none bg-neutral-200 p-4 text-xl font-semibold"
+                    className="mt-5 flex w-full cursor-pointer items-center justify-between rounded-t-lg border-none bg-neutral-200 p-4 text-xl font-semibold hover:bg-indigo-300"
                 >
                     {title}
                 </button>
@@ -31,7 +31,7 @@ const Accordion = ({
         return (
             <button
                 onClick={onOpen}
-                className="my-5 flex w-full cursor-pointer items-center justify-between rounded-lg border-none bg-neutral-200 p-4 text-xl font-semibold"
+                className="my-5 flex w-full cursor-pointer items-center justify-between rounded-lg border-none bg-neutral-200 p-4 text-xl font-semibold hover:bg-indigo-300"
             >
                 {title}
             </button>
