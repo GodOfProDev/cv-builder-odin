@@ -3,7 +3,6 @@ import Accordion from './Accordion'
 import EducationForm from './forms/EducationForm'
 import ExperienceForm from './forms/ExperienceForm'
 import PersonalDetailsForm from './forms/PersonalDetailsForm'
-import Button from './Button'
 import PersonalInfo from '../data/personalInfo'
 import Education from '../data/education'
 import Experience from '../data/experience'
@@ -40,9 +39,6 @@ const Sidebar = ({
             >
                 <ExperienceForm setExperienceData={setExperienceData} />
             </Accordion>
-            <div className="py-3">
-                <Button>LOAD EXAMPLE</Button>
-            </div>
         </div>
     )
 }
